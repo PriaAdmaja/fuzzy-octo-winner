@@ -2,12 +2,10 @@ const changeArray = (arr, n) => {
     if(arr.length / 2 !== n) {
         return 'Panjang data harus 2n'
     }
-    const firstArr = arr.slice(0, n);
-    const secondArr = arr.slice(n, arr.length)
     const result = [];
     for(let i = 0; i<n; i++) {
-        result.push(firstArr[i])
-        result.push(secondArr[i])
+        result.push(arr[i])
+        result.push(arr[i+n])
     }
     return result
 };
